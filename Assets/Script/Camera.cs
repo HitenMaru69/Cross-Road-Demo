@@ -14,9 +14,17 @@ public class Camera : MonoBehaviour
 
     private void LateUpdate()
     {
+        Vector3 targetPosition = targrtToFollow.transform.position;  // Old Code  //new Vector3(targrtToFollow.position.x , targrtToFollow.position.y + offSet.y, targrtToFollow.position.z + offSet.z);
+        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);  // Old Code //Vector3.Lerp(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
-        Vector3 targetPosition = new Vector3(targrtToFollow.position.x + offSet.x, targrtToFollow.position.y + offSet.y, targrtToFollow.position.z + offSet.z);
-        transform.position = Vector3.Lerp(transform.position, targetPosition, moveSpeed);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag(NameTag.player))
+        {
+            Debug.Log("collide gameobject With " + other.gameObject.name);
+        }
     }
 
 
