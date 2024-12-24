@@ -14,8 +14,10 @@ public class Camera : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 targetPosition = targrtToFollow.transform.position;  // Old Code  //new Vector3(targrtToFollow.position.x , targrtToFollow.position.y + offSet.y, targrtToFollow.position.z + offSet.z);
-        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);  // Old Code //Vector3.Lerp(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        transform.position =  targrtToFollow.position + offSet;
+
+       // Vector3 targetPosition = targrtToFollow.transform.position;  // Old Code  //new Vector3(targrtToFollow.position.x , targrtToFollow.position.y + offSet.y, targrtToFollow.position.z + offSet.z);
+        //transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);  // Old Code //Vector3.Lerp(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
     }
 

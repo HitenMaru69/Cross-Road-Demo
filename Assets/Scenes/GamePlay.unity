@@ -163,12 +163,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9b4db2a899c714ea888fc900d546ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spwanPrefeb: {fileID: 430601635864933040, guid: 1901a9f447072a245a09b08dbc22457b, type: 3}
-  lenghtOfObject: 10
+  roadPrefeb:
+  - {fileID: 4717898734930582284, guid: c8e80425f929f42418dc88af2fcefca2, type: 3}
+  - {fileID: 4717898734930582284, guid: c8e80425f929f42418dc88af2fcefca2, type: 3}
+  roadPrefebLength: 6.5
   playerref: {fileID: 1294518953}
-  activeObject: []
-  poolObject: []
-  numOfObjectinStart: 10
+  activeObjectList: []
+  poolObjectList: []
+  numOfObjectinStart: 20
 --- !u!1 &542489359
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +212,7 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 0
+  m_FOVAxisMode: 1
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
@@ -226,11 +228,11 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: 5
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 62.944763
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -256,13 +258,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542489359}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9, y: 15, z: -17.6}
+  m_LocalRotation: {x: 0.36487678, y: 0, z: 0, w: 0.93105584}
+  m_LocalPosition: {x: 0, y: 9.6, z: 27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 42.8, y: 0, z: 0}
 --- !u!114 &542489363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,13 +272,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542489359}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cad8316626f4494ea417d64f7b6a853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targrtToFollow: {fileID: 1294518957}
-  offSet: {x: 0, y: 0, z: 0}
+  offSet: {x: 0, y: 9.6, z: -6.81}
   moveSpeed: 2
 --- !u!65 &542489364
 BoxCollider:
@@ -295,7 +297,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 10, y: 30.17167, z: 31.954342}
   m_Center: {x: 0, y: -10.085835, z: 10.977171}
@@ -405,7 +407,7 @@ Transform:
   m_GameObject: {fileID: 1294518953}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 3.201097}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
