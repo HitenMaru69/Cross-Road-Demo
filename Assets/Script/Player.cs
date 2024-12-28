@@ -5,29 +5,30 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 1f;
     [SerializeField] Animator animator;
+    [SerializeField] FixedJoystick joystick;
 
     private Rigidbody rb;
     private float horizontal;
     private float vertical;
-    
 
-   
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+
     }
 
     private void OnEnable()
     {
+     
         GameManager.instance.PlayerHit += OnPlayerDie;
     }
+
 
     private void OnPlayerDie(object sender, EventArgs e)
     {
         Debug.Log("Player Die");
-        SpwanRoadManager spwanRoadManager = FindObjectOfType<SpwanRoadManager>();
-        spwanRoadManager.enabled = false;
+
     }
 
     private void Update()
@@ -35,10 +36,12 @@ public class Player : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
 
-        if (Mathf.Abs(vertical) > 0) PlayAnimation(false, true,false,false);
-        else if(Mathf.Abs(horizontal) > 0)
+
+        if (Mathf.Abs(vertical) > 0 || Mathf.Abs(joystick.Vertical )> 0) PlayAnimation(false, true,false,false);
+        else if(Mathf.Abs(horizontal) > 0 || Mathf.Abs(joystick.Horizontal) > 0)
         {
-            if(horizontal > 0)
+           
+            if(horizontal > 0 || joystick.Horizontal > 0)
             {
                 PlayAnimation(false, false, false, true);
             }
@@ -55,8 +58,10 @@ public class Player : MonoBehaviour
 
     void PlayerMovement()
     {
-
+        // For KeyBord Input
         transform.Translate(new Vector3(horizontal * moveSpeed * Time.fixedDeltaTime, 0, vertical * moveSpeed*Time.fixedDeltaTime));
+        // For Mobile Input
+        transform.Translate(new Vector3(joystick.Horizontal * moveSpeed * Time.fixedDeltaTime, 0, joystick.Vertical * moveSpeed*Time.fixedDeltaTime));
 
     }
 

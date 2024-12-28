@@ -6,11 +6,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public event EventHandler PlayerHit;
+    public EventHandler PlayerHit;
 
     private void Awake()
     {
-        instance = this; 
+       instance = this;
+       
     }
 
 
