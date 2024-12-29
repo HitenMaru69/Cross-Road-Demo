@@ -18,18 +18,6 @@ public class Player : MonoBehaviour
 
     }
 
-    private void OnEnable()
-    {
-     
-        GameManager.instance.PlayerHit += OnPlayerDie;
-    }
-
-
-    private void OnPlayerDie(object sender, EventArgs e)
-    {
-        Debug.Log("Player Die");
-
-    }
 
     private void Update()
     {

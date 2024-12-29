@@ -4,5 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HomeScreen.unity
+    guid: 9b06996005cc99148b8bc4a4a367fa0d
+  - enabled: 1
+    path: Assets/Scenes/GamePlay.unity
+    guid: 1554f85e4f2c8c044bf0d3bd94fecc87
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
