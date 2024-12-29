@@ -736,6 +736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7218889144595318856}
+  - component: {fileID: 1436584269455138802}
   m_Layer: 0
   m_Name: Road2
   m_TagString: Untagged
@@ -761,8 +762,33 @@ Transform:
   - {fileID: 1293613448112317001}
   - {fileID: 1184146100869362464}
   - {fileID: 5806777424530187879}
+  - {fileID: 6861640208274192181}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 17, z: 0}
+--- !u!114 &1436584269455138802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2624345820286285377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead7cd38dc3a96945a574975313642d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spwanPoint:
+  - {fileID: 6861640208274192181}
+  cars:
+  - {fileID: 7023889158362996588, guid: ef8c3298d6cd5a04382fe20294d2d64a, type: 3}
+  - {fileID: 7967704367531120544, guid: 6f7f9e1a0dd4e9243a36fc8a3f85865f, type: 3}
+  - {fileID: 6720810778985119981, guid: ecedd8372bc4fbb49a42b1275b368b07, type: 3}
+  - {fileID: 4030317461523462608, guid: 809aec70d3e41674bac5ffa06086c56e, type: 3}
+  - {fileID: 2310314017375590611, guid: 37c5337f6254165458267874d8bdf277, type: 3}
+  - {fileID: 8091300390955617574, guid: d08d631308767a84fb8a5174f87338c5, type: 3}
+  - {fileID: 6011580821942361077, guid: 0e5bcf7e65972024698049b839fc23de, type: 3}
+  - {fileID: 8868351698553353798, guid: d5561bbd3d4ec5a41a76d2a3e5fb0f7d, type: 3}
+  - {fileID: 6438610929602377684, guid: 94bc1324fa533ac4483057b15f7b5290, type: 3}
 --- !u!1 &4526495160816482086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,6 +1380,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6408934052789688635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6861640208274192181}
+  m_Layer: 0
+  m_Name: SpwanPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6861640208274192181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6408934052789688635}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.49991274, y: 0.49991274, z: 0.50008726, w: 0.50008726}
+  m_LocalPosition: {x: -19.6, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7218889144595318856}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 90}
 --- !u!1 &7905578583024619294
 GameObject:
   m_ObjectHideFlags: 0

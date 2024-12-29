@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 1f;
     [SerializeField] Animator animator;
     [SerializeField] FixedJoystick joystick;
+    [SerializeField] SoundManager soundManager;
 
     private Rigidbody rb;
     private float horizontal;
@@ -36,6 +37,13 @@ public class Player : MonoBehaviour
             else PlayAnimation(false, false, true, false);
         }
         else PlayAnimation(true, false,false,false);
+        
+
+        // Update Player Score
+        if((vertical > 0 || joystick.Vertical > 0) && !GameManager.instance.isPlayerDie)
+        {
+            GameManager.instance.Score += 1;
+        }
 
     }
 
@@ -68,8 +76,5 @@ public class Player : MonoBehaviour
             GameManager.instance.CallPlayerHitEvent();
         }
     }
-
-
-
    
 }
